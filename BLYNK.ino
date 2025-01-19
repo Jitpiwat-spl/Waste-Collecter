@@ -126,8 +126,6 @@ void setup() {
   analogWrite(enable2A, 200);  // ความเร็วสำหรับมอเตอร์ซ้าย
   analogWrite(enable2B, 200);  // ความเร็วสำหรับมอเตอร์ขวา
   
-  servo1.attach(6);  // กำหนดให้ Servo ตัวที่ 1 เชื่อมต่อกับขา 9
-  servo2.attach(11); // กำหนดให้ Servo ตัวที่ 2 เชื่อมต่อกับขา 10
 
   // Debug console
   Serial.begin(9600);
