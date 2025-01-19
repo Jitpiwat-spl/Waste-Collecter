@@ -106,33 +106,6 @@ BLYNK_WRITE(V2) {
   }
 }
 
-//ควบคุมservo
-BLYNK_WRITE(V3) {
-  int val = param.asInt();
-  if (val == 1) {
-
-    // ควบคุม Servo ตัวที่ 1
-    for (int pos = 0; pos <= 180; pos++) {
-    servo1.write(pos);  // หมุน Servo ตัวที่ 1 จาก 0 ถึง 180 องศา
-    }
-    // ควบคุม Servo ตัวที่ 2
-    for (int pos = 0; pos <= 180; pos++) {
-    servo2.write(pos);  // หมุน Servo ตัวที่ 2 จาก 0 ถึง 180 องศา
-    }
-  }
-    
-  else {
-    for (int pos = 180; pos >= 0; pos--) {
-    servo1.write(pos);  // หมุน Servo ตัวที่ 1 จาก 180 กลับไปที่ 0 องศา
-    
-    }
-    for (int pos = 180; pos >= 0; pos--) {
-    servo2.write(pos);  // หมุน Servo ตัวที่ 2 จาก 180 กลับไปที่ 0 องศา
-    }
-
-  }
-}
-
 void setup() {
   // ตั้งค่าพินของมอเตอร์เป็น OUTPUT
   pinMode(motorLeft1, OUTPUT);
